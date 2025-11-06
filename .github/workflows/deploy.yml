@@ -8,6 +8,11 @@ on:
     branches:
       - main
 
+permissions:
+   id-token: write    # 👈 Required for OIDC
+   contents: read
+
+
 jobs:
   terraform:
     name: 'Terraform Lint, Security Check, and Deploy'
